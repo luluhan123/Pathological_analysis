@@ -9,8 +9,8 @@ MAX_AREA = 1048576
 AREA_THRESHOLD = 8000
 
 if __name__ == '__main__':
-    # path = 'transfer//1702621_382_27648_5120.jpg'
-    path = 'patch//1702621_0_0_0.jpg'
+    # path = 'D://data//breast_cancer_HE//transfer//1702621_382_27648_5120.jpg'
+    path = 'D://data//breast_cancer_HE//patch//1702621_0_0_0.jpg'
     image = cv2.imread(path)
 
     _, He, _ = ColorDeconvolution(path)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     He_closing = cv2.morphologyEx(He_opening, cv2.MORPH_CLOSE, closing_kernel)
 
     # Otsu's thresholding
-    _, th = cv2.threshold(He_closing, 0, 255,
+    _, th = cv2.threshold(He_closing, 0 ,255,
                           cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     th = cv2.bitwise_not(th)
 
