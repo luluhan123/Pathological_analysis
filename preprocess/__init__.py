@@ -2,3 +2,8 @@ from .color_deconvolution import *
 from .color_transfer import *
 from .gradient import *
 from .image_enhancement import *
+from .color_normalization import *
+from .filters import *
+from .max_clustering import *
+from .area_open import *
+from .norm_histogram import norm_histogram
